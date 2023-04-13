@@ -1,0 +1,18 @@
+{
+  "name": "@ts-rest-example/contract",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ts-rest/core": "^3.19.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.2"
+  }
+}

@@ -1,0 +1,18 @@
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../src/generated/client"
+  engineType      = "binary"
+  binaryTargets   = ["rhel-openssl-1.0.x", "darwin", "darwin-arm64", "debian-openssl-1.1.x"]
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id    String @id @default(cuid())
+  title String
+  body  String
+}

@@ -1,0 +1,23 @@
+{
+  "name": "root",
+  "private": true,
+  "engines": {
+    "node": "^16"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ],
+    "nohoist": [
+      "**/jest",
+      "**/jest/**"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^5.4.3"
+  },
+  "resolutions": {
+    "@types/react": "^18.0.0"
+  }
+}
