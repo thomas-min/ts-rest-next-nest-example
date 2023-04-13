@@ -1,4 +1,4 @@
-# ts-rest Next + Nest Example
+# ts-rest : Next + Nest Example
 
 This is a example of how to use the `@ts-rest` library in a fullstack monorepo.
 `@ts-rest/core` is used to create `@ts-rest-example/contract` package.
@@ -20,7 +20,7 @@ This example repo uses [Lerna](https://lerna.js.org/) for monorepo workflow.
 
 ### Prerequisites
 
-- Install Yarn and Lerna.
+- Install Yarn.
 
 ```bash
 npm install -g yarn
@@ -36,7 +36,7 @@ npx lerna bootstrap
 
 ### Migrate DB
 
-- Make sure MySQL server is running on local machine.
+- Make sure MySQL server is running on your local machine.
 
 ```bash
 npx lerna run migrate:local
