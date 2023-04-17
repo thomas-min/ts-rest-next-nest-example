@@ -1,4 +1,4 @@
-import { queryClient } from "@/utils/queryClient";
+import { queryClient } from "@/services/queryClient";
 
 export function useDeletePost() {
   return queryClient.posts.deletePost.useMutation();

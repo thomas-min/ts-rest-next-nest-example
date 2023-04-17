@@ -1,8 +1,4 @@
-import {
-  ServerInferRequest,
-  ServerInferResponseBody,
-  initContract,
-} from "@ts-rest/core";
+import { initContract } from "@ts-rest/core";
 import { z } from "zod";
 
 const c = initContract();
@@ -19,38 +15,7 @@ export const PostSchema = z.object({
   body: z.string(),
 });
 
-export type CreatePostRequest = ServerInferRequest<
-  typeof postContract.createPost
->;
-export type CreatePostResponse = ServerInferResponseBody<
-  typeof postContract.createPost
->;
-
-export type GetPostRequest = ServerInferRequest<typeof postContract.getPost>;
-export type GetPostResponse = ServerInferResponseBody<
-  typeof postContract.getPost
->;
-
-export type GetPostsRequest = ServerInferRequest<typeof postContract.getPosts>;
-export type GetPostsResponse = ServerInferResponseBody<
-  typeof postContract.getPosts
->;
-
-export type UpdatePostRequest = ServerInferRequest<
-  typeof postContract.updatePost
->;
-export type UpdatePostResponse = ServerInferResponseBody<
-  typeof postContract.updatePost
->;
-
-export type DeletePostRequest = ServerInferRequest<
-  typeof postContract.deletePost
->;
-export type DeletePostResponse = ServerInferResponseBody<
-  typeof postContract.deletePost
->;
-
-export const postContract = c.router({
+export const postApi = c.router({
   createPost: {
     method: "POST",
     path: "/posts",
